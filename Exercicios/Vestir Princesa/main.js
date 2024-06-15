@@ -1,4 +1,7 @@
 const validar = document.getElementsByClassName('btn')[0]
+const modalMensagem = document.getElementById("dialog-mensagem")
+const voltarMapa = document.getElementById("btn-voltar")
+
 
 const cores = ['amarelo', 'azul', 'ciano', 'verde', 'musgo', 'rosa bebe', 'salmao', 'limao', 'vermelho']
 const valores = ['#FEE085', '#168FFF', '#73D8C6', '#72E948', '#ADC15D', '#F1C1EC', '#FF7676', '#79F9B4', '#E90A0A']
@@ -83,7 +86,10 @@ validar.addEventListener('click', () => {
 
         resultado = calcularNota(differenceTop, differenceSaia)
         if (resultado) {
-            alert('Parabéns, você passou!')
+            modalMensagem.showModal()
+            voltarMapa.addEventListener("click",()=>{
+            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+        })
         }
         else {
             alert('Tente novamente!')
