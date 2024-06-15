@@ -16,44 +16,122 @@
 
 
 <div id="container-explicação">
-    <h1>Nome Conteudo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque possimus? Corporis magni sunt error, suscipit soluta magnam, maxime illum nihil, a saepe molestias quibusdam? Commodi, modi voluptatibus? Magnam, totam!
-    Iste dolore natus iusto eos vitae quae cumque mollitia optio pariatur temporibus at aut nulla amet perspiciatis ut dolorum, hic, quibusdam alias dolores a doloremque recusandae officiis? Modi, nihil velit.
-    Earum, quaerat ea, reiciendis porro itaque, consectetur minus iure quasi delectus optio quas sapiente doloribus fuga distinctio dolor voluptatum! Culpa, ratione fugit repellat iste facilis ea accusantium eaque corporis reprehenderit.</p>
-    <div class="code-editor">
-        <div class="header">
-          <span class="title">Code</span>
-        
-        </div>
-        <div class="editor-content">
-          <code class="code">
-            <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
+<h1>Propriedades CSS</h1>
+<p>
+  <h3>1. font-style</h3>
+  Define o estilo da fonte do texto. Os valores comuns são: normal: O texto é exibido em um estilo padrão. italic: O texto é exibido em itálico. oblique: O texto é inclinado, similar ao itálico, mas menos formal.
+  Exemplo:
+  <code class="code-explicacao">p {font-style: italic;}</code>
+  <br>  
+  <h3>2. font-size</h3>
+  Define o tamanho da fonte do texto. Pode ser especificado em unidades como px, em, %, etc.
+  Exemplo:
+  <code class="code-explicacao">p {font-size: 20px;}</code>
+  <br>
   
-            <p class="property">
-              <span class="color-2">max-width</span><span>:</span>
-              
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
-              
-                <span class="">;</span>
-            </p>
-            <p class="property">
-              <span class="color-2">background-color</span><span>:</span>
-              <span class="color-preview-1"></span><span class="">#1d1e22</span>;
-            </p>
-            <p class="property">
-              <span class="color-2"> box-shadow</span><span>:</span>
-              <span class="color-1">0px 4px 30px  <span class="color-preview-2"></span><span class="color-3">rgba(</span>0, 0, 0, 0.5<span class="color-3">)</span></span>;
-            </p>
-            <p class="property">
-              <span class="color-2">border-radius</span><span>:</span>
-              <span class="color-1">8px</span>;
-            </p>
-            <p class="property"><span>}</span></p>
-            
-          </code>
-        </div>
+  <h3>3. color</h3>
+  Define a cor do texto. Pode ser especificado por nome de cor, valores hexadecimais, RGB, RGBA, HSL, HSLA, etc.
+  Exemplo:
+
+  <code class="code-explicacao">p {color: blue;}</code>
+  <br>
+  
+  <h3>4. font-family</h3>
+  Define a família da fonte do texto. Pode especificar uma lista de fontes, separadas por vírgulas.
+  Exemplo:
+  <code class="code-explicacao" >p {font-family: Arial, sans-serif;}</code>
+</p>
+    <h2>Exercício</h2>
+    <p>Digite as propriedades nos locais certos. Essas propriedades serão aplicados aos elementos com a palavra "isabella".</p>
+
+    <div class="code-editor">
+      <div class="header">
+        <span class="title">Code</span>
+    
       </div>
+      <div class="editor-content">
+        <code class="code">
+          <p><span class="color-0">.isabella </span> <span>{</span></p>
+
+
+
+          <p class="property">
+            <span class="span">
+              <input class="input input-alt" id="font-size" placeholder="Digite seu código" type="text"></span><span>:</span>
+              25px
+              <span class="">;</span>
+          </p>
+
+
+
+
+
+          <p class="property">
+            <span class="font-family"><input class="input input-alt" id="font-family" placeholder="Digite seu código" type="text"></span><span>:</span>
+
+              'Verdana', sans-serif;
+
+          </p>
+
+
+          <p class="property">
+            <span class="font-style"><input class="input input-alt" id="font-style" placeholder="Digite seu código" type="text"></span><span>:</span>
+            <span class="color-1">italic</span>;
+          </p>
+
+
+          <p class="property">
+            <span class="color"><input class="input input-alt" id="color" placeholder="Digite seu código" type="text"></span><span>:</span>
+            <span class="color-1">pink</span>;
+          </p>
+        
+          <p class="property"><span>}</span></p>
+        
+        </code>
+
+    
+      </div>
+    
+    </div>
+
+      <button class="btn" id="btnValidar">VALIDAR</button>
+    
 </div>
+<div id="container-acao">
+
+  <div id="historia-isabella">
+    <h3>História da nossa princesa</h3>
+<p>
+  Era uma vez, em um reino distante, uma linda princesa chamada <span class="Isabella">Isabella</span>. Ela era conhecida em todo o país por sua beleza radiante, seu coração bondoso e sua inteligência feroz.
+
+  Apesar de sua beleza, a Princesa <span class="Isabella">Isabella</span> não era vaidosa nem superficial. Ela era profundamente compassiva, sempre colocando as necessidades dos outros antes das suas. Ela passava grande parte do tempo visitando os doentes e os pobres, oferecendo-lhes conforto e assistência.
+
+  Além de sua gentileza, a Princesa <span class="Isabella">Isabella</span> também era incrivelmente inteligente. Ela adorava ler e aprender e era versada em muitos assuntos, da história à ciência e à literatura. Ela era uma debatedora habilidosa e conseguia se sair bem em qualquer conversa.
+
+  Mas talvez o que tornou a princesa <span class="Isabella">Isabella</span> verdadeiramente especial tenha sido a sua coragem. Ela não tinha medo de falar o que pensava ou defender aquilo em que acreditava, mesmo que isso significasse ir contra a vontade de seus pais ou as tradições de seu reino. Ela era uma verdadeira líder, inspirando aqueles ao seu redor com sua bravura e determinação.
+
+  Certo dia, o reino foi ameaçado por um poderoso dragão que aterrorizava as vilas e queimava as colheitas. Enquanto muitos fugiam com medo, a Princesa <span class="Isabella">Isabella</span> decidiu enfrentar a criatura. Ela reuniu os cavaleiros mais valentes e liderou uma expedição até a caverna do dragão. Com sua inteligência estratégica, ela conseguiu enganar a fera e conduzi-la para uma armadilha, salvando assim seu reino.
+
+  Mas essa não foi a única vez que a Princesa <span class="Isabella">Isabella</span> demonstrou sua coragem. Em outra ocasião, uma terrível praga se espalhou pelo reino, causando pânico e desespero. A princesa, ao invés de se esconder no conforto de seu palácio, dedicou-se a encontrar uma cura. Ela estudou incansavelmente antigos manuscritos e consultou os mais sábios curandeiros. Finalmente, descobriu uma mistura de ervas medicinais que trouxe alívio e cura para o povo.
+
+  A fama de suas façanhas espalhou-se para além das fronteiras de seu reino. Embaixadores e nobres de terras distantes vinham buscar seu conselho e aprender com sua sabedoria. Ela organizou conferências sobre governança justa, saúde pública e educação, onde compartilhava seus conhecimentos e aprendia novas práticas que poderia implementar em seu próprio reino.
+
+  No entanto, a Princesa <span class="Isabella">Isabella</span> sabia que o verdadeiro poder de um líder reside no amor e no respeito que recebe de seu povo. Ela continuava a caminhar entre os cidadãos comuns, ouvindo suas histórias e preocupações, ajudando-os em tudo que podia. Sua presença era uma fonte de esperança e inspiração para todos.
+
+  No fundo, a princesa <span class="Isabella">Isabella</span> também sonhava com um mundo mais pacífico. Ela iniciou diálogos de paz com reinos vizinhos que tinham sido inimigos por gerações. Com paciência e diplomacia, conseguiu selar acordos que garantiam prosperidade e segurança para todos.
+
+  Anos se passaram e a Princesa <span class="Isabella">Isabella</span> tornou-se uma rainha amada e respeitada. Sob seu reinado, o reino floresceu como nunca antes. Ela construiu escolas, hospitais e bibliotecas, incentivando o conhecimento e o bem-estar de todos. Seu legado de bondade, coragem e sabedoria foi lembrado por gerações.
+
+  Assim, a história da Princesa <span class="Isabella">Isabella</span> se tornou uma lenda, inspirando jovens a serem corajosos, compassivos e justos, e mostrando que a verdadeira grandeza vem de um coração dedicado ao bem dos outros.
+</p>
+
+      
+  </div>
+
+</div>
+
+ 
+    
 
 </div>
 </body>
