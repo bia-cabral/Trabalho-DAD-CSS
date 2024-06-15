@@ -25,7 +25,7 @@ let saiaImg = document.getElementById('saia-img')
 saiaImg.setAttribute('src', '../../assets/saia-'+corSaia+'.png')
 
 // Função para converter um código hexadecimal para um objeto RGB
-function hexToRgb(hex) {
+function hexParaRgb(hex) {
     // Remove o caractere '#' se estiver presente
     hex = hex.replace(/^#/, '');
 
@@ -44,9 +44,9 @@ function hexToRgb(hex) {
 }
 
 // Função para calcular a diferença entre dois códigos hexadecimais
-function hexDifference(hex1, hex2) {
-    const rgb1 = hexToRgb(hex1);
-    const rgb2 = hexToRgb(hex2);
+function hexDiferenca(hex1, hex2) {
+    const rgb1 = hexParaRgb(hex1);
+    const rgb2 = hexParaRgb(hex2);
 
     // Calcula a diferença absoluta entre cada componente RGB
     const diffR = Math.abs(rgb1.r - rgb2.r);
@@ -54,9 +54,9 @@ function hexDifference(hex1, hex2) {
     const diffB = Math.abs(rgb1.b - rgb2.b);
 
     // Soma as diferenças para obter uma medida de "aproximação"
-    const totalDifference = diffR + diffG + diffB;
+    const diferencaTotal = diffR + diffG + diffB;
 
-    return totalDifference;
+    return diferencaTotal;
 }
 
 // Função para calcular nota do usuário
@@ -79,8 +79,8 @@ validar.addEventListener('click', () => {
             throw new Error('Por favor, insira um código hexadecimal válido no formato #RRGGBB.');
         }
 
-        const differenceTop = hexDifference(hexTop, inputTop.toUpperCase());
-        const differenceSaia = hexDifference(hexSaia, inputSaia.toUpperCase());
+        const differenceTop = hexDiferenca(hexTop, inputTop.toUpperCase());
+        const differenceSaia = hexDiferenca(hexSaia, inputSaia.toUpperCase());
 
         console.log(differenceTop + " " + differenceSaia);
 
