@@ -4,22 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="boxModel.css">
+  <link rel="stylesheet" href="boxModelStyle.css">
   <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
-    <img src="perfil.png" alt="perfil" id="perfil">
+    <a href="../index.html"><img src="../../assets/logo.png" alt="logo"></a>
+    <img src="../../assets/perfil.png" alt="perfil" id="perfil">
 </header>
 
 
 
 <div id="container-explicação">
-    <h1>Nome Conteudo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque possimus? Corporis magni sunt error, suscipit soluta magnam, maxime illum nihil, a saepe molestias quibusdam? Commodi, modi voluptatibus? Magnam, totam!
-    Iste dolore natus iusto eos vitae quae cumque mollitia optio pariatur temporibus at aut nulla amet perspiciatis ut dolorum, hic, quibusdam alias dolores a doloremque recusandae officiis? Modi, nihil velit.
-    Earum, quaerat ea, reiciendis porro itaque, consectetur minus iure quasi delectus optio quas sapiente doloribus fuga distinctio dolor voluptatum! Culpa, ratione fugit repellat iste facilis ea accusantium eaque corporis reprehenderit.</p>
+    <h1>Box model</h1>
+    <p>O Box Model é um conceito fundamental no CSS que define como os elementos de uma página web são exibidos e manipulados. Cada elemento em uma página é representado como uma caixa retangular, composta por quatro áreas principais:</p>
+    <br>
+    <ul>
+      <li>Content (Conteúdo): A área onde o conteúdo (texto, imagem, etc.) é exibido.</li>
+      <br>
+      <li>Padding (Preenchimento): O espaço entre o conteúdo e a borda da caixa.</li>
+      <br>
+      <li>Border (Borda): A borda ao redor da caixa de conteúdo e padding. Pode ser estilizada com cor, espessura e estilo.</li>
+      <br>
+      <li>Margin (Margem): O espaço fora da borda do elemento. Este espaço separa o elemento dos outros ao seu redor e é completamente transparente.</li>
+    </ul>
+    <br>
+    <h1>Oque fazer: </h1>
+    <ol>
+      <li>Entender a Posição Atual: Observe a posição inicial da imagem da princesa e a imagem fantasma. </li>
+      <br>
+      <li>Ajustar Margens: Use as caixas de entrada para inserir valores de margin-left e margin-top. Esses valores movem a imagem da princesa para a direita e para baixo, respectivamente.</li>
+      <br>
+      <li>Visualizar o Resultado: Após inserir os valores, visualize a página para ver como a imagem se move. Ajuste conforme necessário até que a princesa esteja perfeitamente alinhada com a imagem fantasma.</li>
+    </ol>
     <div class="code-editor">
         <div class="header">
           <span class="title">Code</span>
@@ -29,12 +46,21 @@
           <code class="code">
             <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
   
+
+            </p>
+            <p class="property">
+              <span class="color-2">margin-left</span><span>:</span>
+              <input class="input input-alt" placeholder="Aqui" title="O valor é um múltiplo de 10" type="text" id="inputleft">
+              <span class="color-1">px</span>;</p>
+              <p class="property">
+                <span class="color-2">margin-top</span><span>:</span>
+                <input class="input input-alt" placeholder="Aqui" title="O valor é um múltiplo de 10" type="text" id="inputtop">
+                <span class="color-1">px</span>;</p>
             <p class="property">
               <span class="color-2">max-width</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
+              </span><span class="color-4">8vw</span>;
               
-                <span class="">;</span>
             </p>
             <p class="property">
               <span class="color-2">background-color</span><span>:</span>
@@ -53,8 +79,15 @@
           </code>
         </div>
       </div>
+      <button class="btn" id="btValidar">VALIDAR</button>
 </div>
+  <img src="../../assets/Princesa-maior.png" alt="" id="imgprincesa">
+  <img src="../../assets/Princesa-maior.png" alt="" id="imgprincesaObjetivo">
+</div>
+<dialog id="dialog-mensagem" class="modal">
+  <h1>Você ganhou!</h1>
+  <button id="btn-voltar" class="btn">Voltar ao mapa</button>
+</dialog>
 
-</div>
 </body>
 </html>
