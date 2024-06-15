@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+   
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ 
+body {
+    background-color: #FFE5EF;
+}
+ 
+header {
+    background-color: #FFC8DD;
+}
+ 
+h1 {
+    font-family: 'Kufam', sans-serif;
+    font-weight: normal;
+    color: #DA417C;
+    text-align: center;
+    font-size: 48px;
+}
+ 
+.doces {
+    height: 684px;
+}
+ 
+#perfil {
+    float: right;
+}
+ 
+#direita {
+    float: right;
+}
+ 
+#container-explicação{
+  display: flex;
+  flex-direction: column;
+  background-color: #FFA9CA;
+  position: relative;
+  text-align: center;
+  float: left;
+  max-width: 90vh;
+  height: 100vh;
+  padding: 12vh 6vw;
+}
+ 
+#container-explorar p{
+  font-size: 26px;
+}
+ 
+#notebook{
+  position: absolute;
+  top: 62vh;
+  left: 58vw;
+  height: 38vh ;
+  width: 28vw;
+}    
+ 
+
+.code-editor {
+  margin-top: 50px;
+  max-width: 500px;
+  background-color: #1d1e22;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 2px;
+}
+  
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+  
+  .title {
+    font-family: Kufan, sans-serif;
+    font-weight: 900;
+    font-size: 14px;
+    letter-spacing: 1.57px;
+    color: rgb(212 212 212);
+  }
+ 
+  
+  .editor-content {
+    margin-top: 30px;
+    margin: 0 10px 10px;
+    color: white;
+    
+
+  }
+ 
+  
+  .property {
+    margin-left: 20px;
+  }
+  
+  .property:hover {
+    cursor: text;
+  }
+  
+  .editor-content .color-0 {
+    color: rgb(86 156 214);
+  }
+  
+  .editor-content .color-1 {
+    color: rgb(182 206 168);
+    
+  }
+  
+  .editor-content .color-2 {
+    color: rgb(156 220 254);
+  }
+  
+  .editor-content .color-3 {
+    color: rgb(207 146 120);
+  }
+  
+  .color-preview-1,.color-preview-2 {
+    height: 8px;
+    width: 8px;
+    border: 1px solid #fff;
+    display: inline-block;
+    margin-right: 3px;
+  }
+  
+  .color-preview-1 {
+    background-color: #1d1e22;
+  }
+  
+  .color-preview-1 {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+  .input {
+    color: #fff;
+    font-size: 12px;
+    background-color: transparent;
+    width: 100px;
+    box-sizing: border-box;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-border {
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+ 
+  .input-alt {
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  .input-alt:focus + .input-border-alt {
+    width: 100%;
+  }
+
+  p{
+    display:flex;
+    justify-content: left;
+  }

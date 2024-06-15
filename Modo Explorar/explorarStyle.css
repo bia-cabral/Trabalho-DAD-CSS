@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap');
+    
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #FFE5EF;
+}
+
+header {
+    background-color: #FFC8DD;
+}
+
+h1 {
+    font-family: 'Kufam', sans-serif;
+    font-weight: normal;
+    color: #DA417C;
+    text-align: center;
+    font-size: 48px;
+}
+
+.doces {
+    height: 684px;
+}
+
+#perfil {
+    float: right;
+}
+
+#direita {
+    float: right;
+}
+
+#container-explorar{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFA9CA;
+    position: relative;
+    text-align: center;
+    float: left;
+    max-width: 54vw;
+    padding: 12vh 6vw
+}
+
+#container-explorar p{
+    font-size: 26px;
+}
+
+#notebook{
+    position: absolute;
+    top: 50vh;
+    left: 58vw;
+    height: 38vh ;
+    width: 28vw;
+}    
+
+#container-brigadeiro{
+    display: flex;
+    position: relative;
+    background-color: #FFC8DD;
+    background-image: url(../assets/Brigadeiro.png);
+    background-size: 2vw;
+    height: 7vh;
+    width: 25vh;
+    padding: 40px 34px;
+    left: 8vw;
+}
