@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="displayStyle.css">
+  <link rel="icon" href="../../assets/logo.png">
   <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
-    <img src="perfil.png" alt="perfil" id="perfil">
+    <a href="../../index.html"><img src="../../assets/logo.png" alt="logo"></a>
+    <img src="../../assets/perfil.png" alt="perfil" id="perfil">
 </header>
 
 
@@ -27,32 +28,38 @@
         </div>
         <div class="editor-content">
           <code class="code">
-            <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
-  
+            <p><span class="color-0">.personagens </span> <span>{</span></p>
             <p class="property">
-              <span class="color-2">max-width</span><span>:</span>
+              <span class="color-2">margin-top</span><span>:</span>
+              <span class="color-1">25%</span>;
+            </p>
+            <p class="property">
+              <span class="color-2">display</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
+                <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-display">
               
                 <span class="">;</span>
             </p>
             <p class="property">
-              <span class="color-2">background-color</span><span>:</span>
-              <span class="color-preview-1"></span><span class="">#1d1e22</span>;
-            </p>
-            <p class="property">
-              <span class="color-2"> box-shadow</span><span>:</span>
-              <span class="color-1">0px 4px 30px  <span class="color-preview-2"></span><span class="color-3">rgba(</span>0, 0, 0, 0.5<span class="color-3">)</span></span>;
-            </p>
-            <p class="property">
-              <span class="color-2">border-radius</span><span>:</span>
-              <span class="color-1">8px</span>;
+              <span class="color-2">justify-content</span><span>:</span>
+              
+                <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-justify">
+              
+                <span class="">;</span>
             </p>
             <p class="property"><span>}</span></p>
             
           </code>
         </div>
       </div>
+    <button class="btn">VALIDAR</button>
+</div>
+
+<div id="container-desafio">
+  <div id="personagens">
+    <img src="../../assets/Princesa.png" alt="princesa" id="princesa">
+    <img src="../../assets/Bruxa.png" alt="bruxa" id="bruxa">
+  </div>
 </div>
 
 </div>
