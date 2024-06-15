@@ -44,6 +44,7 @@ btValidar.addEventListener("click", () => {
     let inputLeftGet = parseInt(window.getComputedStyle(princess).marginLeft)
     let inputTopGet = parseInt(window.getComputedStyle(princess).marginTop)
     if(inputLeftGet == 800 && inputTopGet == 550){
+        persistencia()
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
             window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
@@ -52,5 +53,11 @@ btValidar.addEventListener("click", () => {
 })
 
 
+function persistencia(){
+    const listaFasesCompletas = carregarFasesCompletas()
+    listaFasesCompletas.push("tres")
+
+    localStorage.setItem("fasesCompletas", JSON.stringify(listaFasesCompletas))
+}
 
 
