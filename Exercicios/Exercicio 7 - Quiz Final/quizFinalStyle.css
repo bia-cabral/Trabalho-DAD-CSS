@@ -7,6 +7,8 @@
  
 body {
     background-color: #FFE5EF;
+    overflow-x: hidden; 
+
 }
  
 header {
@@ -19,6 +21,20 @@ h1 {
     color: #DA417C;
     text-align: center;
     font-size: 48px;
+}
+
+h1~p{
+  font-family: 'Kufam', sans-serif;
+  text-align: left;
+  font-size: 14px
+}
+
+h2 {
+  font-family: 'Kufam', sans-serif;
+  font-weight: normal;
+  color: #DA417C;
+  text-align: center;
+  font-size: 36px;
 }
  
 .doces {
@@ -41,12 +57,17 @@ h1 {
     text-align: center;
     float: left;
     max-width: 90vh;
-    height: 100vh;
-    padding: 12vh 6vw
+    height: 128vh;
+    padding: 2vh 6vw
 }
- 
-#container-explorar p{
-    font-size: 26px;
+
+#container-acao{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+  max-width: 90vh;
+  height: 128vh;
 }
  
 #notebook{
@@ -74,23 +95,19 @@ h1 {
   }
   
   .title {
-    font-family: Kufan, sans-serif;
+    font-family: 'Kufan', sans-serif;
     font-weight: 900;
     font-size: 14px;
     letter-spacing: 1.57px;
     color: rgb(212 212 212);
   }
- 
   
   .editor-content {
     margin-top: 30px;
     margin: 0 10px 10px;
     color: white;
-    
-
   }
  
-  
   .property {
     margin-left: 20px;
   }
@@ -167,7 +184,94 @@ h1 {
     width: 100%;
   }
 
-  p{
+  code p{
     display:flex;
     justify-content: left;
+  }
+
+  #princesa{
+    position: relative;
+    max-width: 8vw;    
+  }
+
+  #casa-princesa{
+    position: relative;
+    float: right;
+    max-width: 15vw;
+    z-index: 5;
+  }
+
+  .pedra{
+    height: 72px;
+    width: 72px;
+    z-index: 1;
+  }
+
+  #rio{
+    display: inline-block;
+    position: absolute;
+    height: 132vh;
+    width: 50vw;
+    z-index: 1;
+  }
+  .container-pedras{
+    display: flex;
+    position: relative;
+    top: 300px;
+    left: 10px
+  }
+
+  .btn {
+    display: flex;
+    align-self: center;
+    margin: 1% 0 5% 0;
+    border: none;
+    outline: none;
+    background-color: #DA417C;
+    padding: 10px 20px;
+    margin-top: 80px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 5px;
+    transition: all ease 0.1s;
+    box-shadow: 0px 5px 0px 0px #927f867f;
+}
+ 
+.btn:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px #927f867f;
+}
+
+  #desafio{
+    margin-top: 8px;
+  }
+
+  #desafio~p{
+    margin-bottom: 14px;
+  }
+
+  ol li{
+      font-family: 'Kufam', sans-serif;
+      font-weight: bold;
+      color: #DA417C;
+      text-align: left;
+  }
+
+  ol p{
+    font-size: 14px
+  }
+
+  #lista-desafios{
+    text-align: left;
+    font-family: 'Kufam', sans-serif;
+    font-weight: normal;
+  }
+
+  .modal{
+    margin: auto;
+    border: solid #bb3669;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
   }
