@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +9,39 @@
 </head>
 <body>
   <header>
-    <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
-    <img src="perfil.png" alt="perfil" id="perfil">
+    <a href="../index.html"><img src="../../assets/logo.png" alt="logo"></a>
+    <img src="../../assets/perfil.png" alt="perfil" id="perfil">
 </header>
 
 
 
 <div id="container-explicação">
-    <h1>Nome Conteudo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque possimus? Corporis magni sunt error, suscipit soluta magnam, maxime illum nihil, a saepe molestias quibusdam? Commodi, modi voluptatibus? Magnam, totam!
-    Iste dolore natus iusto eos vitae quae cumque mollitia optio pariatur temporibus at aut nulla amet perspiciatis ut dolorum, hic, quibusdam alias dolores a doloremque recusandae officiis? Modi, nihil velit.
-    Earum, quaerat ea, reiciendis porro itaque, consectetur minus iure quasi delectus optio quas sapiente doloribus fuga distinctio dolor voluptatum! Culpa, ratione fugit repellat iste facilis ea accusantium eaque corporis reprehenderit.</p>
+    <h1>Position</h1>
+    <p>A propriedade position no CSS é usada para definir como um elemento é posicionado na página. Existem várias opções que você pode usar:</p>
+
+      <ul>
+        <li>static: Posição padrão, segue o fluxo normal do documento.</li>
+        <br>
+        <li>relative: O elemento é posicionado em relação ao seu elemento pai.</li>
+        <br>
+        <li>O elemento é posicionado em relação ao seu parente mais próximo com posição diferente de static.</li><br>
+        <li>O elemento é posicionado em relação à janela do navegador</li><br>
+        <li>O elemento alterna entre relative e fixed dependendo da rolagem.</li><br>
+      </ul>
+
+      <h1>Testando a Propriedade position</h1>
+      <p>Neste exercício, você vai experimentar diferentes valores da propriedade position para mover um elemento na tela. Vamos usar dois elementos: uma princesa mãe e uma princesa filha.
+      <br><br>
+      Objetivo: Você deve experimentar diferentes valores da propriedade position até conseguir mover a princesa filha para o lado da princesa mãe.</p>
+      <br><br>
+
+      Instruções:
+      <ul>
+        <li>No campo de entrada no codigo abaixo, digite um valor para a propriedade position (pode ser static, relative, absolute, fixed ou sticky) e clique no botão para aplicar a mudança.</li><br>
+        <li>Observe como a princesa filha se move na tela.</li><br>
+        <li>Continue experimentando até conseguir mover a princesa filha para o lado da princesa mãe.</li>
+      </ul>
+  
     <div class="code-editor">
         <div class="header">
           <span class="title">Code</span>
@@ -28,13 +50,16 @@
         <div class="editor-content">
           <code class="code">
             <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
-  
+            </p>
+            <p class="property">
+              <span class="color-2">position</span><span>:</span>
+              <input class="input input-alt" placeholder="Aqui" title="O valor é um múltiplo de 10" type="text" id="position">
+              ;</p>
             <p class="property">
               <span class="color-2">max-width</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
+              </span><span class="color-4">8vw</span>;
               
-                <span class="">;</span>
             </p>
             <p class="property">
               <span class="color-2">background-color</span><span>:</span>
@@ -53,8 +78,15 @@
           </code>
         </div>
       </div>
+      <button class="btn" id="btValidar">VALIDAR</button>
 </div>
+<img src="../../assets/Princesa-maior.png" alt="" id="imgprincesaObjetivo">
+  <img src="../../assets/Princesa-maior.png" alt="" id="imgprincesa">
+</div>
+<dialog id="dialog-mensagem" class="modal">
+  <h1>Você ganhou!</h1>
+  <button id="btn-voltar" class="btn">Voltar ao mapa</button>
+</dialog>
 
-</div>
 </body>
 </html>

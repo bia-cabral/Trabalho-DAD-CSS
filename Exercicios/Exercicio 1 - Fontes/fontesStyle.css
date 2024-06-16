@@ -20,7 +20,27 @@ h1 {
     text-align: center;
     font-size: 48px;
 }
- 
+h2 {
+  font-family: 'Kufam', sans-serif;
+  font-weight: normal;
+  color: #DA417C;
+  text-align: center;
+  font-size: 40px;
+  margin: 20px;
+}
+h3 {
+  font-family: 'Kufam', sans-serif;
+  color: #DA417C;
+  font-weight: normal;
+  text-align: center;
+  font-size: 25px;
+}
+
+.code-explicacao{
+  background-color: #db91ad;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
 .doces {
     height: 684px;
 }
@@ -38,10 +58,9 @@ h1 {
   flex-direction: column;
   background-color: #FFA9CA;
   position: relative;
-  text-align: center;
+  text-align: left;
   float: left;
   max-width: 90vh;
-  height: 100vh;
   padding: 12vh 6vw;
 }
  
@@ -167,7 +186,64 @@ h1 {
     width: 100%;
   }
 
-  p{
+  code p{
     display:flex;
     justify-content: left;
   }
+  #container-acao {
+    padding-top: 65px;
+    margin-left: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#historia-isabella {
+  margin-top: 20px;
+  width: 550px;
+  background-color: #FFC8DD;
+  border-radius: 5px;
+  border: 2px solid #DA417C;
+}
+
+#historia-isabella p {
+  margin: 20px;
+}
+.btn {
+  display: flex;
+  align-self: center;
+  margin: 1% 0 5% 0;
+  border: none;
+  outline: none;
+  background-color: #DA417C;
+  padding: 10px 20px;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #927f867f;
+}
+
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #927f867f;
+}
+#container-acao {
+  padding-top: 65px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+#historia-isabella  {
+  margin: 20px;
+}
+strong {
+  font-size: 20px;
+  color: #7f294a;
+}
