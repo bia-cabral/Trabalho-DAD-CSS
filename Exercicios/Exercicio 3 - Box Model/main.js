@@ -53,11 +53,10 @@ btValidar.addEventListener("click", () => {
 })
 
 
-function persistencia(){
-    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
-    console.log(listaFasesCompletas)
-    listaFasesCompletas.push("tres")
+const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+    if(!listaFasesCompletas.includes("tres")){
+        listaFasesCompletas.push("tres")
 
-    localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
-}
+        localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
+    }
 
