@@ -371,3 +371,32 @@ strong {
     transform: scale(0.9);
   }
 }
+
+.modal{
+  margin: auto;
+  border: solid #bb3669;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+.btn {
+  display: flex;
+  align-self: center;
+  margin: 1% 0 5% 0;
+  border: none;
+  outline: none;
+  background-color: #DA417C;
+  padding: 10px 20px;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px #927f867f;
+}
+
+.btn:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #927f867f;
+}

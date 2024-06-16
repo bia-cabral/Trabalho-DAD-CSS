@@ -1,67 +1,58 @@
 // Selecionando cada checkbox individualmente pelo ID
 const btnBlack = document.getElementById('cbx-46-black');
-const btnyellow = document.getElementById('cbx-46-yellow');
-const btnorange = document.getElementById('cbx-46-orange');
-const btnpink = document.getElementById('cbx-46-pink');
-const btnred = document.getElementById('cbx-46-red');
+const btnYellow = document.getElementById('cbx-46-yellow');
+const btnOrange = document.getElementById('cbx-46-orange');
+const btnPink = document.getElementById('cbx-46-pink');
+const btnRed = document.getElementById('cbx-46-red');
+const modal = document.querySelector("#dialog-mensagem")
+const bntVoltar = document.querySelector("#btn-voltar")
+function persistencia(){
+    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+    if(!listaFasesCompletas.includes("qautro")){
+        listaFasesCompletas.push("quatro")
+  
+        localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
+      }
+  }
+// Função para exibir alerta e desmarcar checkbox após 5 segundos
+function showAlertAndUncheck(message, checkbox) {
+    window.alert(message);
+    setTimeout(() => {
+        checkbox.checked = false;
+    }, 500);
+}
 
 // Adicionando event listeners para cada checkbox
 btnBlack.addEventListener('change', function() {
     if (this.checked) {
-        // Ação a ser executada quando checkbox1 é marcado
-        console.log("Checkbox 1 marcado");
-        // Executar função específica, por exemplo:
-        // handleCheckbox1();
-    } else {
-        // Ação a ser executada quando checkbox1 é desmarcado
-        console.log("Checkbox 1 desmarcado");
+        showAlertAndUncheck("Resposta incorreta :(, tente novamente", this);
     }
 });
 
-btnyellow.addEventListener('change', function() {
+btnYellow.addEventListener('change', function() {
     if (this.checked) {
-        // Ação a ser executada quando checkbox2 é marcado
-        console.log("Checkbox 2 marcado");
-        // Executar função específica, por exemplo:
-        // handleCheckbox2();
-    } else {
-        // Ação a ser executada quando checkbox2 é desmarcado
-        console.log("Checkbox 2 desmarcado");
+        showAlertAndUncheck("Resposta incorreta :(, tente novamente", this);
     }
 });
 
-btnorange.addEventListener('change', function() {
+btnOrange.addEventListener('change', function() {
     if (this.checked) {
-        // Ação a ser executada quando checkbox3 é marcado
-        console.log("Checkbox 3 marcado");
-        // Executar função específica, por exemplo:
-        // handleCheckbox3();
-    } else {
-        // Ação a ser executada quando checkbox3 é desmarcado
-        console.log("Checkbox 3 desmarcado");
+        showAlertAndUncheck("Resposta incorreta :(, tente novamente", this);
     }
 });
 
-btnpink.addEventListener('change', function() {
-    if (this.checked) {
-        // Ação a ser executada quando checkbox4 é marcado
-        console.log("Checkbox 4 marcado");
-        // Executar função específica, por exemplo:
-        // handleCheckbox4();
-    } else {
-        // Ação a ser executada quando checkbox4 é desmarcado
-        console.log("Checkbox 4 desmarcado");
+btnPink.addEventListener('change', function() {
+    if (this.checked) { 
+        persistencia()
+        modal.showModal()
+        voltarMapa.addEventListener("click",()=>{
+            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+        })
     }
 });
 
-btnred.addEventListener('change', function() {
+btnRed.addEventListener('change', function() {
     if (this.checked) {
-        // Ação a ser executada quando checkbox5 é marcado
-        console.log("Checkbox 5 marcado");
-        // Executar função específica, por exemplo:
-        // handleCheckbox5();
-    } else {
-        // Ação a ser executada quando checkbox5 é desmarcado
-        console.log("Checkbox 5 desmarcado");
+        showAlertAndUncheck("Resposta incorreta :(, tente novamente", this);
     }
 });

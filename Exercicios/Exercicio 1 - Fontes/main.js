@@ -1,52 +1,86 @@
 const botaoValidar = document.getElementById("btnValidar");
+const modal = document.querySelector("#dialog-mensagem")
+const bntVoltar = document.querySelector("#btn-voltar")
+function persistencia(){
+  const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+  if(!listaFasesCompletas.includes("dois")){
+      listaFasesCompletas.push("dois")
 
+      localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
+    }
+}
 
 botaoValidar.addEventListener("click", function() {
 
   const classeIsabella = document.getElementsByClassName("Isabella");
 
   // Font Style
-  // Acesse o input pelo seu ID
   const fontstyleInput = document.getElementById("font-style");
-  // Pegue o valor do input
   const fontstyleInputValue = fontstyleInput.value;
+  
+  // Contador de acertos
+  let contador = 0;
+  
   if(fontstyleInputValue == "font-style"){
-    for (var i = 0; i < classeIsabella.length; i++) {
+    for (let i = 0; i < classeIsabella.length; i++) {
       classeIsabella[i].style.fontStyle = "italic";
     }    
+  } else {
+    contador++;
   }
 
-  // color
-  // Acesse o input pelo seu ID
+  // Color
   const colorInput = document.getElementById("color");
-  // Pegue o valor do input
   const colorInputValue = colorInput.value;
+  
   if(colorInputValue == "color"){
-    for (var i = 0; i < classeIsabella.length; i++) {
+    for (let i = 0; i < classeIsabella.length; i++) {
       classeIsabella[i].style.color = "#DA417C";
     }    
+  } else {
+    contador++;
   }
   
   // Font Size
-  // Acesse o input pelo seu ID
   const fontsizeInput = document.getElementById("font-size");
-  // Pegue o valor do input
   const fontsizeInputValue = fontsizeInput.value;
+  
   if(fontsizeInputValue == "font-size"){
-    for (var i = 0; i < classeIsabella.length; i++) {
+    for (let i = 0; i < classeIsabella.length; i++) {
       classeIsabella[i].style.fontSize = "25px";
     }    
+  } else {
+    contador++;
   }
- // font-family
-  // Acesse o input pelo seu ID
-  const fontfamilyInput = document.getElementById("font-size");
-  // Pegue o valor do input
+  
+  // Font Family
+  const fontfamilyInput = document.getElementById("font-family");
   const fontfamilyValue = fontfamilyInput.value;
-  if(fontfamilyInput == "font-family"){
-    for (var i = 0; i < classeIsabella.length; i++) {
+  
+  if(fontfamilyValue == "font-family"){
+    for (let i = 0; i < classeIsabella.length; i++) {
       classeIsabella[i].style.fontFamily = "'Verdana', sans-serif";
     }    
+  } else {
+    contador++;
   }
 
+  // Alertas com base no contador
+  if(contador == 4){
+    window.alert("Todos os campos estão errados.");
+  } else if(contador == 3){
+    window.alert("75% de erro, tente novamente");
+  } else if(contador == 2){
+    window.alert("50% de erro, tente novamente");
+  } else if(contador == 1){
+    window.alert("25% de erro, tente novamente");
+  } else {  
+    persistencia()
+    modal.showModal()
+    voltarMapa.addEventListener("click",()=>{
+        window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+    })
+  }
 
-})
+});
+
