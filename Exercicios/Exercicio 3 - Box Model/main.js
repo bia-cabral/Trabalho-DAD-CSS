@@ -43,7 +43,7 @@ inputTop.addEventListener("keyup",()=>{
 btValidar.addEventListener("click", () => {
     let inputLeftGet = parseInt(window.getComputedStyle(princess).marginLeft)
     let inputTopGet = parseInt(window.getComputedStyle(princess).marginTop)
-    if(inputLeftGet == 800 && inputTopGet == 550){
+    if(inputLeftGet == 485 && inputTopGet == 350){
         persistencia()
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
