@@ -57,7 +57,7 @@ h2 {
     text-align: center;
     float: left;
     max-width: 90vh;
-    height: 128vh;
+    height: 112vh;
     padding: 2vh 6vw
 }
 
@@ -67,7 +67,14 @@ h2 {
   position: relative;
   text-align: center;
   max-width: 90vh;
-  height: 128vh;
+  height: 112vh;
+}
+
+strong{
+  background-color: rgb(153, 149, 149);
+  color: white;
+  border-radius: 4px;
+  padding: 1px 2px
 }
  
 #notebook{
@@ -191,7 +198,8 @@ h2 {
 
   #princesa{
     position: relative;
-    max-width: 8vw;    
+    max-width: 8vw;   
+  
   }
 
   #casa-princesa{
@@ -210,14 +218,14 @@ h2 {
   #rio{
     display: inline-block;
     position: absolute;
-    height: 132vh;
+    height: 116vh;
     width: 50vw;
     z-index: 1;
   }
   .container-pedras{
     display: flex;
     position: relative;
-    top: 300px;
+    top: 200px;
     left: 10px
   }
 
