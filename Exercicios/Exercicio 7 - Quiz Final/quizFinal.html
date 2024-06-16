@@ -3,23 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CSS Kingdom</title>
+  <link rel="icon" href="../../assets/logo.png">
   <link rel="stylesheet" href="quizFinalStyle.css">
   <script src="main.js" defer></script>
 </head>
 <body>
   <header>
-    <a href="../index.html"><img src="../assets/logo.png" alt="logo"></a>
-    <img src="perfil.png" alt="perfil" id="perfil">
+    <a href="../../index.html"><img src="../../assets/logo.png" alt="logo"></a>
+    <img src="../../assets/perfil.png" alt="perfil" id="perfil">
 </header>
-
-
+<img src="../../assets/Casa Princesa.png" alt="Casa Princesa" id="casa-princesa">
 
 <div id="container-explicação">
-    <h1>Nome Conteudo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque possimus? Corporis magni sunt error, suscipit soluta magnam, maxime illum nihil, a saepe molestias quibusdam? Commodi, modi voluptatibus? Magnam, totam!
-    Iste dolore natus iusto eos vitae quae cumque mollitia optio pariatur temporibus at aut nulla amet perspiciatis ut dolorum, hic, quibusdam alias dolores a doloremque recusandae officiis? Modi, nihil velit.
-    Earum, quaerat ea, reiciendis porro itaque, consectetur minus iure quasi delectus optio quas sapiente doloribus fuga distinctio dolor voluptatum! Culpa, ratione fugit repellat iste facilis ea accusantium eaque corporis reprehenderit.</p>
+    <h1>Quiz Final</h1>
+    <p>Após todos esses desafios, a princesa finalmente conseguiu chegar perto de seu castelo, mas ainda temos um problema! Todo ano acontece uma cheia no Rio da CSS Kingdom, e isso acaba impossibilitando que a princesa chegue ao seu castelo de um jeito convencional. Para ela conseguir chegar em seu castelo, ela deve quebrar os obstáculos que estão próximos dela com a sua áurea. Porém, o maior desafio ainda está à sua frente: atravessar o rio, e ela não sabe nadar. Sabendo disso, a princesa decide usar seus poderes mágicos para voar sobre o rio.</p>
+
+    <h2 id="desafio">Seu desafio:</h2>
+    <p>A partir das seguintes propriedades, você deve ajudar princesa chegar no seu castelo: </p>
+
+
+    <ol id = "lista-desafios">
+      <li>Top</li>
+      <p id="textoPedras">A propriedade top permite você mover a princesa para baixo, definindo uma distancia entre a borda superior da princesa e a princesa. Primeiramente, você deve chegar perto das pedras com o top, fazendo uso assim da próxima propriedade para quebras as pedras.</p>
+
+      <li>background-color</li>
+      <p>A propriedade background-color permite você adicionar uma cor de fundo ao elemento. Nesse exercício, você terá que adicionar um background-color na princesa para ela ativar sua aura, quebrando assim as pedras. Existem 3 tipos de aura, sendo elas: <strong>Purple - Aura de Quebra</strong>. <strong>Blue: Aura de Proteção</strong>. <strong>Yellow: Aura de Imortalidade</strong>.</p>
+
+
+      <li>left</li>
+      <p id="textoLeft">A propriedade top permite você mover a princesa da esquerda para a direita. Com essa propriedade, você podera atravessar o rio. Porém temos um pequeno problema, a princesa não sabe nadar. Por conta disso, primeiramente você tera que alterar o z-index para ela levitar por cima do rio</p>
+
+      <li>z-index</li>
+      <p>A propriedade z-index é usada para controlar a ordem de empilhamento dos elementos. Sem essa propriedade, caso você movesse a princesa em direção ao rio, ela iria se afogar, mas adicionando um valor numérico nela, você irá fazer ela levitar por cima do rio</p>
+    </ol>
+
+
     <div class="code-editor">
         <div class="header">
           <span class="title">Code</span>
@@ -27,34 +46,68 @@
         </div>
         <div class="editor-content">
           <code class="code">
-            <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
+            <p><span class="color-0">.princesa-editor </span> <span>{</span></p>
   
+              <p class = "property">
+                <span class="color-2">position</span><span>:</span>
+                <span class="">relative;</span>
+              </p> 
+
+              <p class="property">
+                <span class="color-2">top</span><span>:</span>
+                
+                  <input class="input input-alt" id="valorTop" placeholder="Digite seu código" type="text">
+                
+                  <span class="">px;</span>
+              </p>
+
             <p class="property">
-              <span class="color-2">max-width</span><span>:</span>
+              <span class="color-2">background-color</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
+                <input class="input input-alt" id="valorBackgroundColor" placeholder="Digite seu código" type="text">
               
                 <span class="">;</span>
             </p>
+
             <p class="property">
-              <span class="color-2">background-color</span><span>:</span>
-              <span class="color-preview-1"></span><span class="">#1d1e22</span>;
+              <span class="color-2">left</span><span>:</span>
+              
+                <input class="input input-alt" id="valorLeft" placeholder="Digite seu código" type="text">
+              
+                <span class="">;</span>
             </p>
+
             <p class="property">
-              <span class="color-2"> box-shadow</span><span>:</span>
-              <span class="color-1">0px 4px 30px  <span class="color-preview-2"></span><span class="color-3">rgba(</span>0, 0, 0, 0.5<span class="color-3">)</span></span>;
+              <span class="color-2">z-index</span><span>:</span>
+              
+                <input class="input input-alt" id="valorZindex" placeholder="Digite seu código" type="text">
+              
+                <span class="">;</span>
             </p>
-            <p class="property">
-              <span class="color-2">border-radius</span><span>:</span>
-              <span class="color-1">8px</span>;
-            </p>
-            <p class="property"><span>}</span></p>
-            
+            </p> 
           </code>
         </div>
       </div>
+    </div>
+    
+    <div id="container-acao">
+      <img src="../../assets/Rio.png" alt="Rio" id="rio">
+
+      <img src="../../assets/Princesa.png" alt="princesa" id="princesa">
+
+      <div class="container-pedras">
+        <img src="../../assets/pedra.png" alt="Pedras" class="pedra">
+        <img src="../../assets/pedra.png" alt="Pedras" class="pedra">
+        <img src="../../assets/pedra.png" alt="Pedras" class="pedra">
+      </div>
+    
+  </div>
 </div>
 
-</div>
+<dialog id="dialog-mensagem" class="modal">
+  <h1>Parabéns, você ganhou!</h1>
+  <button id="btn-voltar" class="btn">Voltar ao mapa</button>
+</dialog>
+
 </body>
-</html>
+</html> 
