@@ -86,6 +86,7 @@ validar.addEventListener('click', () => {
 
         resultado = calcularNota(differenceTop, differenceSaia)
         if (resultado) {
+            persistencia()
             modalMensagem.showModal()
             voltarMapa.addEventListener("click",()=>{
             window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
@@ -99,3 +100,14 @@ validar.addEventListener('click', () => {
         alert(error.message);
     }
 })
+
+
+
+function persistencia(){
+    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+    if(!listaFasesCompletas.includes("tres")){
+        listaFasesCompletas.push("tres")
+
+        localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
+    }
+}

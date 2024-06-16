@@ -45,7 +45,18 @@ validar.addEventListener('click', () => {
     addAtributos();
 
     setTimeout(() => {
+        persistencia()
         mensagem()
     }, 500)
     
 });
+
+
+function persistencia(){
+    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+    if(!listaFasesCompletas.includes("tres")){
+        listaFasesCompletas.push("tres")
+
+        localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
+    }
+}

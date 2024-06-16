@@ -3,8 +3,8 @@ const modal = document.querySelector("#dialog-mensagem")
 const bntVoltar = document.querySelector("#btn-voltar")
 function persistencia(){
   const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
-  if(!listaFasesCompletas.includes("dois")){
-      listaFasesCompletas.push("dois")
+  if(!listaFasesCompletas.includes("um")){
+      listaFasesCompletas.push("um")
 
       localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
     }
