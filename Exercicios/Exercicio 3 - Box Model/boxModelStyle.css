@@ -183,10 +183,11 @@ h1 {
 #imgprincesaObjetivo{
   position: fixed;
   width: 200px;
-  left: 1630px;
-  top: 630px;
+  left: 1330px;
+  top: 430px;
   opacity: 60%;
 }
+
 
 ul{
   text-align: left;
