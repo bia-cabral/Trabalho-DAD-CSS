@@ -16,45 +16,186 @@
 
 
 <div id="container-explicação">
-    <h1>Nome Conteudo</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, atque possimus? Corporis magni sunt error, suscipit soluta magnam, maxime illum nihil, a saepe molestias quibusdam? Commodi, modi voluptatibus? Magnam, totam!
-    Iste dolore natus iusto eos vitae quae cumque mollitia optio pariatur temporibus at aut nulla amet perspiciatis ut dolorum, hic, quibusdam alias dolores a doloremque recusandae officiis? Modi, nihil velit.
-    Earum, quaerat ea, reiciendis porro itaque, consectetur minus iure quasi delectus optio quas sapiente doloribus fuga distinctio dolor voluptatum! Culpa, ratione fugit repellat iste facilis ea accusantium eaque corporis reprehenderit.</p>
-    <div class="code-editor">
-        <div class="header">
-          <span class="title">Code</span>
-        
-        </div>
-        <div class="editor-content">
-          <code class="code">
-            <p><span class="color-0">.pincesa-editor </span> <span>{</span></p>
+  <h2>Especificidade CSS</h2>
+  <p>A especificidade no CSS determina quais regras de estilo são aplicadas a um elemento com base nos seletores, resolvendo conflitos entre regras.</p>
+
+  <br>
+  <br>
   
-            <p class="property">
-              <span class="color-2">max-width</span><span>:</span>
-              
-                <input class="input input-alt" placeholder="Digite seu código" type="text">
-              
-                <span class="">;</span>
-            </p>
-            <p class="property">
-              <span class="color-2">background-color</span><span>:</span>
-              <span class="color-preview-1"></span><span class="">#1d1e22</span>;
-            </p>
-            <p class="property">
-              <span class="color-2"> box-shadow</span><span>:</span>
-              <span class="color-1">0px 4px 30px  <span class="color-preview-2"></span><span class="color-3">rgba(</span>0, 0, 0, 0.5<span class="color-3">)</span></span>;
-            </p>
-            <p class="property">
-              <span class="color-2">border-radius</span><span>:</span>
-              <span class="color-1">8px</span>;
-            </p>
-            <p class="property"><span>}</span></p>
-            
-          </code>
-        </div>
-      </div>
+  <h3>Hierarquia de Especificidade</h3>
+  <br>
+  <h4>Inline Styles</h4>
+  <p>Os estilos aplicados diretamente no atributo <code class="code-explicacao">style</code> de um elemento HTML têm a maior especificidade.</p>
+  <p>Exemplo: <code class="code-explicacao">&lt;div style="color: red;"&gt;&lt;/div&gt;</code>.</p>
+  <br>
+  <h4>IDs</h4>
+  <p>Seletores de ID têm uma alta especificidade.</p>
+  <p>Exemplo: <code class="code-explicacao">#header { color: blue; }</code>.</p>
+  <br>
+  <h4>Classes, Pseudoclasse e Atributos</h4>
+  <p>Seletores de classe, pseudoclasses e atributos têm uma especificidade média.</p>
+  <p>Exemplo: <code class="code-explicacao">.menu { color: green; }</code> ou <code class="code-explicacao">a:hover { color: yellow; }</code> ou <code class="code-explicacao">[type="text"] { color: black; }</code>.</p>
+  <br>
+  <h4>Elementos e Pseudoelementos</h4>
+  <p>Seletores de elementos (tags) e pseudoelementos têm a menor especificidade.</p>
+  <p>Exemplo: <code class="code-explicacao">p { color: pink; }</code> ou <code class="code-explicacao">::before { content: ""; }</code>.</p>
+  <br>
+  <br>
+  <h3>Regras de Desempate</h3>
+  <p>Se duas regras tiverem a mesma especificidade, a última regra definida no CSS é aplicada. A ordem em que as regras aparecem no código também afeta qual estilo é aplicado.</p>
+  
+  <h2>Exercício</h2>
+    <p>Selecione qual é a cor que a frase vai ficar. Se baseando nos códigos ao lado</p>
+    
+   <!-- Black -->
+<div class="checkbox-wrapper-46-black">
+  <input type="checkbox" id="cbx-46-black" class="inp-cbx-black" />
+  <label for="cbx-46-black" class="cbx-black">
+    <span>
+      <svg viewBox="0 0 12 10" height="10px" width="12px">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </span>
+    <span>black</span>
+  </label>
+</div>
+<!-- Yellow -->
+<div class="checkbox-wrapper-46-yellow">
+  <input type="checkbox" id="cbx-46-yellow" class="inp-cbx-yellow" />
+  <label for="cbx-46-yellow" class="cbx-yellow">
+    <span>
+      <svg viewBox="0 0 12 10" height="10px" width="12px">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </span>
+    <span>yellow</span>
+  </label>
+</div>
+<!-- Orange -->
+<div class="checkbox-wrapper-46-orange">
+  <input type="checkbox" id="cbx-46-orange" class="inp-cbx-orange" />
+  <label for="cbx-46-orange" class="cbx-orange">
+    <span>
+      <svg viewBox="0 0 12 10" height="10px" width="12px">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </span>
+    <span>orange</span>
+  </label>
+</div>
+<!-- Pink -->
+<div class="checkbox-wrapper-46-pink">
+  <input type="checkbox" id="cbx-46-pink" class="inp-cbx-pink" />
+  <label for="cbx-46-pink" class="cbx-pink">
+    <span>
+      <svg viewBox="0 0 12 10" height="10px" width="12px">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </span>
+    <span>pink</span>
+  </label>
+</div>
+<!-- Red -->
+<div class="checkbox-wrapper-46-red">
+  <input type="checkbox" id="cbx-46-red" class="inp-cbx-red" />
+  <label for="cbx-46-red" class="cbx-red">
+    <span>
+      <svg viewBox="0 0 12 10" height="10px" width="12px">
+        <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
+      </svg>
+    </span>
+    <span>red</span>
+  </label>
 </div>
 
+
 </div>
+
+<div id="container-acao">
+
+  <div id="historia-isabella">
+    
+<p>
+  "Isabella, a princesa que redefine estilos e conquista corações com a precisão de um seletor CSS."
+</p>
+
+      
+  </div>
+
+  <div class="code-editor">
+    <div class="header">
+      <span class="title">Css</span>
+    
+    </div>
+    <div class="editor-content">
+      <code class="code">
+        <!-- BODY -->
+        <p><span class="color-0">&lt;body&gt;</span></p>
+        <!-- DIV -->
+        <p class="property"><span class="color-0">&lt;div </span><span class="color-1">id</span><span class="color-2">="special"</span> <span class="color-1">class</span><span class="color-2">="highlight"&gt;</span></p>
+        <!-- SPAN -->
+        <p class="property"><span class="color-0">&lt;span </span><span class="color-1">class</span><span class="color-2">="highlight"&gt;</span><span class="color-3">"Isabella, a princesa[...]"</span><span class="color-0">&lt;/span&gt;</span></p>
+        <!-- Closing DIV -->
+        <p class="property"><span class="color-0">&lt;/div&gt;</span></p>
+        <!-- Closing BODY -->
+        <p><span class="color-0">&lt;/body&gt;</span></p>
+      </code>
+    
+  </div>
+
+  </div>
+  <div class="code-editor">
+    <div class="header">
+      <span class="title">Html</span>
+    
+    </div>
+    <div class="editor-content">
+      <code class="code">
+        <!-- SPAN -->
+        <p>
+          <span class="color-0">.span </span> <span>{</span>
+        </p>
+
+        <p class="property">
+          <span class="span">color</span>
+          <span>:</span>
+          black
+          <span>;</span>
+        </p>
+
+        <p>
+          <span>}</span>
+        </p>
+        <br>
+        <!-- highlight -->
+        <p><span class="color-0">.highlight </span> <span>{</span></p>
+        <p class="property"><span class="span">color</span><span>:</span>yellow<span>;</span></p>
+        <p class="property"><span>}</span></p>
+        <br>
+        <!-- #special span -->
+        <p><span class="color-0">#special span</span> <span>{</span></p>
+        <p class="property"><span class="span">color</span><span>:</span>orange<span>;</span></p>
+        <p><span>}</span></p>
+        <br>
+        <!-- highlight span -->
+        <p><span class="color-0">.highlight span</span> <span>{</span></p>
+        <p class="property"><span class="span">color</span><span>:</span>pink<span>;</span></p>
+        <p><span>}</span></p>
+        <br>
+        <!-- span.highlight -->
+        <p><span class="color-0">span.highlight</span> <span>{</span></p>
+        <p class="property"><span class="span">color</span><span>:</span>red<span>;</span></p>
+        <p ><span>}</span></p>
+      </code>
+   
+    
+  </div>
+
+  </div>
+</div> 
+  
+
+   
+
 </body>
 </html>
