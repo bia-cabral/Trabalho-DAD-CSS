@@ -215,3 +215,11 @@ h1 {
 #personagens{
   margin-top: 25%;
 }
+
+.modal{
+  margin: auto;
+  border: solid #bb3669;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}

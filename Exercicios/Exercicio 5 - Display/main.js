@@ -1,6 +1,8 @@
 let personagens = document.getElementById('personagens');
 const validar = document.getElementsByClassName('btn')[0];
 const cardPerigo = document.getElementById('container-desafio')
+const modalMensagem = document.getElementById("dialog-mensagem")
+const voltarMapa = document.getElementById("btn-voltar")
 const modo = localStorage.getItem("modoJogo")
 
 perigo()
@@ -34,7 +36,9 @@ function mensagem() {
     console.log(cardPerigo.style.backgroundColor);
 
     if (personagens.style.display == 'flex' && personagens.style.justifyContent == 'space-between') {
-        alert('Parabéns, você passou!')
+        modalMensagem.showModal()
+        voltarMapa.addEventListener("click",()=>{
+        window.location.href = "http://127.0.0.1:5501/Trabalho-Git/Trabalho-DAD-CSS/Mapas/MapaHistoria/mapaHistoria.html"})
     }
     else if (cardPerigo.style.backgroundColor == 'rgba(255, 0, 0, 0.56)') {
         alert('A princesa foi capturada!')
@@ -58,9 +62,14 @@ validar.addEventListener('click', () => {
 
 
 function persistencia(){
-    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
-    if(!listaFasesCompletas.includes("tres")){
-        listaFasesCompletas.push("tres")
+    let listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+
+    if (!listaFasesCompletas) {
+        listaFasesCompletas = [];
+    }
+
+    if(!listaFasesCompletas.includes("cinco")){
+        listaFasesCompletas.push("cinco")
 
         localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
     }
