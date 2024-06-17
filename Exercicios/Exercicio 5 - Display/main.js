@@ -32,13 +32,11 @@ function perigo() {
 }
 
 function mensagem() {
-
-    console.log(cardPerigo.style.backgroundColor);
-
     if (personagens.style.display == 'flex' && personagens.style.justifyContent == 'space-between') {
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
         if(modo == "historia"){
+            persistencia()
             window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
         }else{
             window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
@@ -59,7 +57,6 @@ validar.addEventListener('click', () => {
     addAtributos();
 
     setTimeout(() => {
-        persistencia()
         mensagem()
     }, 500)
     
