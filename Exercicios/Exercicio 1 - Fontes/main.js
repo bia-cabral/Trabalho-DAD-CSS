@@ -1,13 +1,15 @@
 const botaoValidar = document.getElementById("btnValidar");
 const modal = document.querySelector("#dialog-mensagem")
 const bntVoltar = document.querySelector("#btn-voltar")
+const modo = localStorage.getItem("modoJogo")
+
 function persistencia(){
   const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
   if(!listaFasesCompletas.includes("um")){
       listaFasesCompletas.push("um")
 
       localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
-    }
+}
 }
 
 botaoValidar.addEventListener("click", function() {
@@ -77,8 +79,12 @@ botaoValidar.addEventListener("click", function() {
   } else {  
     persistencia()
     modal.showModal()
-    voltarMapa.addEventListener("click",()=>{
+    bntVoltar.addEventListener("click",()=>{
+      if(modo == "historia"){
+        window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+      }else{
         window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+      }
     })
   }
 

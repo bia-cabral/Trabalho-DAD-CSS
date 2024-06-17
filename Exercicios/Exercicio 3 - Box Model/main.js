@@ -3,6 +3,7 @@ const inputLeft = document.getElementById('inputleft');
 const btValidar = document.getElementById("btValidar")
 const modalMensagem = document.getElementById("dialog-mensagem")
 const voltarMapa = document.getElementById("btn-voltar")
+const modo = localStorage.getItem("modoJogo")
 
 inputLeft.addEventListener("keyup",()=>{
     let inputToptValor = document.getElementById('inputtop').value
@@ -47,7 +48,11 @@ btValidar.addEventListener("click", () => {
         persistencia()
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
-            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+            if(modo == "historia"){
+                window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+            }else{
+                window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+            }
         })
     }
 })

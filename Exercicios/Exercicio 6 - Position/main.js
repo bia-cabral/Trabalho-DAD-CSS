@@ -3,7 +3,7 @@ const inputLeft = document.getElementById('position');
 const modalMensagem = document.getElementById("dialog-mensagem")
 const voltarMapa = document.getElementById("btn-voltar")
 let valorespossiveis = ["static", "relative", "absolute", "fixed", "sticky", "initial", "inherit"]
-
+const modo = localStorage.getItem("modoJogo")
 
 let position = document.getElementById('position')
 
@@ -27,7 +27,11 @@ btValidar.addEventListener("click", () => {
             persistencia()
             modalMensagem.showModal()
             voltarMapa.addEventListener("click",()=>{
-                window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+                if(modo == "historia"){
+                    window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+                }else{
+                    window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+                }
             })
         }
         else{

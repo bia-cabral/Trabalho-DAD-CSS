@@ -7,6 +7,7 @@ const valorZindexInput = document.querySelector("#valorZindex")
 const textoPedras = document.querySelector("#textoPedras")
 const modal = document.querySelector("#dialog-mensagem")
 const bntVoltar = document.querySelector("#btn-voltar")
+const modo = localStorage.getItem("modoJogo")
 
 let valorTop = ""
 let valorBackgroundColor = ""
@@ -56,7 +57,11 @@ valorTopInput.addEventListener("keyup", (e)=>{
             setTimeout(() => {
                 modal.showModal()
                 bntVoltar.addEventListener("click", ()=>{
-                    window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+                    if(modo == "historia"){
+                        window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+                    }else{
+                        window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+                    }
                 })
             }, 1500)
         }

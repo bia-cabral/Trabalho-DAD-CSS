@@ -1,6 +1,7 @@
 let personagens = document.getElementById('personagens');
 const validar = document.getElementsByClassName('btn')[0];
 const cardPerigo = document.getElementById('container-desafio')
+const modo = localStorage.getItem("modoJogo")
 
 perigo()
 
@@ -37,7 +38,11 @@ function mensagem() {
     }
     else if (cardPerigo.style.backgroundColor == 'rgba(255, 0, 0, 0.56)') {
         alert('A princesa foi capturada!')
-        window.location.href = 'http://127.0.0.1:5501/Trabalho-Git/Trabalho-DAD-CSS/Mapas/MapaHistoria/mapaHistoria.html'
+        if(modo == "historia"){
+            window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+        }else{
+            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+        }
     }
 }
 
