@@ -6,13 +6,15 @@ const btnPink = document.getElementById('cbx-46-pink');
 const btnRed = document.getElementById('cbx-46-red');
 const modal = document.querySelector("#dialog-mensagem")
 const bntVoltar = document.querySelector("#btn-voltar")
+const modo = localStorage.getItem("modoJogo")
+
 function persistencia(){
     const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
     if(!listaFasesCompletas.includes("qautro")){
         listaFasesCompletas.push("quatro")
   
         localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
-      }
+  }
   }
 // Função para exibir alerta e desmarcar checkbox após 5 segundos
 function showAlertAndUncheck(message, checkbox) {
@@ -46,7 +48,11 @@ btnPink.addEventListener('change', function() {
         persistencia()
         modal.showModal()
         voltarMapa.addEventListener("click",()=>{
-            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+            if(modo == "historia"){
+                window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+            }else{
+                window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+            }
         })
     }
 });
