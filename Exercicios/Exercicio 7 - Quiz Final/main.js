@@ -49,7 +49,9 @@ valorTopInput.addEventListener("keyup", (e)=>{
 
     if(atravessou == 1){
         if(valorTop >= 0 && valorTop <= 150){
-            persistencia()
+            if(modo == "historia"){
+                persistencia()            
+            }
             princesa.style.top = "18px"
             princesa.style.left = "490px"
             princesa.style.borderRadius = ''
@@ -113,12 +115,15 @@ valorLeftInput.addEventListener("keyup", ()=>{
                 window.alert("Oh não, caso a princesa tente atravessar o rio ela irá se afogar, altere o z-index para ela levitar por cima do rio!!!")
             }, 1000)
         }else if ((valorTop >= 630 && valorTop < 660) && valorZindex != ""){
-            if(valorLeft >= 460){
+            if(valorLeft >= 460 && valorLeft <= 500){
                  princesa.style.left = `${valorLeft}px`
                  atravessou = 1
                  setTimeout(()=>{
                     window.alert("Parabéns, você conseguiu atravessar a princesa. Agora é so chegar no castelo!!!")
                  }, 1000)
+            }else if(valorLeft > 500){
+                window.alert("Valor muito alto!!!")
+            }else{
                 princesa.style.left = `${valorLeft}px`
             }
         }else if ((valorLeft >= 140 && valorLeft <= 160) && !(valorTop >= 630 && valorTop < 660) && valorZindex == ""){
