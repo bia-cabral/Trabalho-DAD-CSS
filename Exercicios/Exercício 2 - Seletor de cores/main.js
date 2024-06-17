@@ -101,12 +101,15 @@ validar.addEventListener('click', () => {
     }
 })
 
-
-
 function persistencia(){
-    const listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
-    if(!listaFasesCompletas.includes("tres")){
-        listaFasesCompletas.push("tres")
+    let listaFasesCompletas = JSON.parse(localStorage.getItem("fasesConcluidas"))
+
+    if (!listaFasesCompletas) {
+        listaFasesCompletas = [];
+    }
+
+    if(!listaFasesCompletas.includes("dois")){
+        listaFasesCompletas.push("dois")
 
         localStorage.setItem("fasesConcluidas", JSON.stringify(listaFasesCompletas))
     }
