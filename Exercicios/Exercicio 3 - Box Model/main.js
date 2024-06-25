@@ -31,7 +31,7 @@ inputTop.addEventListener("keyup",()=>{
         window.alert("Insira valores maiores que 0")
     }
     else{
-        if(inputTopValor < 431){
+        if(inputTopValor < 417){
             princess.setAttribute("style","margin-top:"+inputTopValor+"px;margin-left:"+inputLeftValor+"px")
         }
         else{
@@ -44,7 +44,7 @@ inputTop.addEventListener("keyup",()=>{
 btValidar.addEventListener("click", () => {
     let inputLeftGet = parseInt(window.getComputedStyle(princess).marginLeft)
     let inputTopGet = parseInt(window.getComputedStyle(princess).marginTop)
-    if((inputLeftGet > 670 && inputLeftGet < 674) && (inputTopGet == 350)){
+    if((inputLeftGet >= 670 && inputLeftGet < 674) && (inputTopGet > 348 && inputTopGet < 352)){
         persistencia()
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
