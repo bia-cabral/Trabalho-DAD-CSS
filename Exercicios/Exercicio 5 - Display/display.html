@@ -16,8 +16,56 @@
 
 
 <div id="container-explicação">
-    <h1>Display em CSS</h1>
-    <p>A propriedade display em CSS define como um elemento HTML é exibido na página. Os valores principais incluem block, que inicia em uma nova linha e ocupa toda a largura disponível; inline, que não inicia uma nova linha e se ajusta ao conteúdo ao redor; inline-block, combinando características de block e inline; flex, permitindo layouts flexíveis com alinhamento e expansão dos itens dentro de um contêiner; grid, que organiza elementos em uma grade bidimensional; table, transformando elementos em blocos de tabela; e none, que oculta completamente o elemento da renderização. A escolha do valor apropriado depende do layout desejado e do comportamento esperado dos elementos na interface do usuário.</p>
+  <h1>Display em CSS</h1>
+  <p>Objetivo: Deixe a princesa o mais longe possível da bruxa utilizando display e suas propriedades</p>
+  <div id="resumo-display">
+    <p>
+      <h3>1. inline</h3>
+      É utilizado quando queremos que os elementos fiquem posicionados lado a lado. É importante dizer que, ao utilizar esse valor, as propriedades width (largura) e height (altura) serão ignoradas.
+      Como utilizar:
+      <code class="code-explicacao">div {display: inline;}</code>
+      <br>
+      <h3>2. block</h3>
+      Quando atribuímos o valor CSS display block à propriedade, significa que o elemento será posicionado em uma nova linha.
+      Como utilizar:
+      <code class="code-explicacao">div {display: block;}</code>
+      <br>
+      <h3>3. flex</h3>
+      Com o display flex, é possível alinhar elementos de maneira mais fácil, distribuir o espaço disponível de forma equivalente e reorganizar a ordem dos elementos.
+      Como utilizar:
+      <code class="code-explicacao">div {display: flex;}</code>
+      <br>
+      <h3>4. grid</h3>
+      O CSS Grid divide a tela em uma grade de linhas e colunas, oferecendo um conjunto de propriedades para manipular elementos das formas mais variáveis possíveis.
+      Como utilizar:
+      <code class="code-explicacao" >div {display: grid;}</code>
+    </p>
+  </div>
+
+  <div id="resumo-justify">
+    <p>
+      <h3>1. flex-start</h3>
+      Os itens são alinhados junto à borda de início (start) de acordo com qual for a flex-direction do container.
+      Como utilizar:
+      <code class="code-explicacao">div {justify-content: flex-start;}</code>
+      <br>
+      <h3>2. flex-end</h3>
+      Os itens são alinhados junto à borda final (end) de acordo com qual for a flex-direction do container.
+      Como utilizar:
+      <code class="code-explicacao">div {justify-content: flex-end;}</code>
+      <br>
+      <h3>3. space-evenly</h3>
+      Os itens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha (incluindo entre os ítens e as bordas) seja igual.
+      Como utilizar:
+      <code class="code-explicacao">div {justify-content: space-evenly;}</code>
+      <br>
+      <h3>4. space-between</h3>
+      Os itens são distribuídos de forma igual ao longo da linha; o primeiro ítem junto à borda inicial da linha, o último junto à borda final da linha.
+      Como utilizar:
+      <code class="code-explicacao" >div {justify-content: space-between;}</code>
+    </p>
+  </div>
+
     <div class="code-editor">
         <div class="header">
           <span class="title">Code</span>
@@ -30,26 +78,30 @@
               <span class="color-2">margin-top</span><span>:</span>
               <span class="color-1">25%</span>;
             </p>
-            <p class="property">
-              <span class="color-2">display</span><span>:</span>
+            <div id="input-display">
+              <p class="property">
+                <span class="color-2">display</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-display">
+                  <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-display">
               
-                <span class="">;</span>
-            </p>
-            <p class="property">
-              <span class="color-2">justify-content</span><span>:</span>
+                  <span>;</span>
+              </p>
+            </div>
+            <div id="input-justify">
+              <p class="property">
+                <span class="color-2">justify-content</span><span>:</span>
               
-                <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-justify">
+                  <input class="input input-alt" placeholder="Digite seu código" type="text" id="tipo-justify">
               
-                <span class="">;</span>
-            </p>
+                  <span class="">;</span>
+              </p>
+            </div>
             <p class="property"><span>}</span></p>
             
           </code>
         </div>
       </div>
-    <button class="btn">VALIDAR</button>
+    <button class="btn">VALIDAR (1/2)</button>
 </div>
 
 <div id="container-desafio">

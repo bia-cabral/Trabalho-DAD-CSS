@@ -4,18 +4,46 @@ const cardPerigo = document.getElementById('container-desafio')
 const modalMensagem = document.getElementById("dialog-mensagem")
 const voltarMapa = document.getElementById("btn-voltar")
 const modo = localStorage.getItem("modoJogo")
+let resumoDisplay = document.getElementById('resumo-display')
+let resumoJustify = document.getElementById('resumo-justify')
+let inputDisplay = document.getElementById('input-display')
+let inputJustify = document.getElementById('input-justify')
 
-perigo()
-
-function addAtributos() {
+function validarDisplay() {
     const display = document.getElementById('tipo-display').value;
-    const just = document.getElementById('tipo-justify').value;
-    
-    personagens.style.display = display;
-    personagens.style.justifyContent = just;
-
-    perigo()
+    if (display == "flex") {
+        personagens.style.display =  display
+        validar.innerText = "VALIDAR (2/2)"
+        resumoDisplay.style.display = "none"
+        resumoJustify.style.display = "block"
+        display.style.display = "none"
+        inputDisplay.style.display = "none"
+        inputJustify.style.display = "block"
+    }
+    else {
+        alert('Tente novamente!')
+    }
 }
+
+function validarJustify() {
+    const just = document.getElementById('tipo-justify').value;
+    perigo()
+    if (just == 'space-between') {
+        personagens.style.justifyContent = 'space-between'
+    }
+}
+
+// perigo()
+
+// function addAtributos() {
+//     const display = document.getElementById('tipo-display').value;
+//     const just = document.getElementById('tipo-justify').value;
+    
+//     personagens.style.display = display;
+//     personagens.style.justifyContent = just;
+
+//     perigo()
+// }
 
 function perigo() {
     const tiposJustPerigo = ['baseline', 'center', 'end', 'flex-end', 'flex-start', 'left', 'right', 'safe']
@@ -33,8 +61,6 @@ function perigo() {
 
 function mensagem() {
 
-    console.log(cardPerigo.style.backgroundColor);
-
     if (personagens.style.display == 'flex' && personagens.style.justifyContent == 'space-between') {
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
@@ -51,13 +77,17 @@ function mensagem() {
 }
 
 validar.addEventListener('click', () => {
-    addAtributos();
+    if (validar.innerHTML.includes("1/2")) {
+        validarDisplay()   
+    }
+    else if (validar.innerHTML.includes("2/2")) {
+        validarJustify()
+    }
 
     setTimeout(() => {
-        persistencia()
         mensagem()
-    }, 500)
-    
+        persistencia()
+    })
 });
 
 
