@@ -70,7 +70,7 @@ botao3.addEventListener("click", ()=>{
 botao4.addEventListener("click", ()=>{
     if(botao4.textContent.includes("🏆")){
         window.alert("Fase já concluida")
-    }else if(fasesConcluidas.includes("um,dois,tres")){
+    }else if(fasesConcluidas.includes("tres")){
         window.location.href = "../../Exercicios/Exercicio 4 - Especificidade/especificidade.html"
     }else{
         window.alert("Faça a fase anterior")
@@ -80,7 +80,7 @@ botao4.addEventListener("click", ()=>{
 botao5.addEventListener("click", ()=>{
     if(botao5.textContent.includes("🏆")){
         window.alert("Fase já concluida")
-    }else if(fasesConcluidas.includes("um,dois,tres,quatro")){
+    }else if(fasesConcluidas.includes("quatro")){
         window.location.href = "../../Exercicios/Exercicio 5 - Display/display.html"
     }else{
         window.alert("Faça a fase anterior")
@@ -90,7 +90,7 @@ botao5.addEventListener("click", ()=>{
 botao6.addEventListener("click", ()=>{
     if(botao6.textContent.includes("🏆")){
         window.alert("Fase já concluida")
-    }else if(fasesConcluidas.includes("um,dois,tres,quatro,cinco")){
+    }else if(fasesConcluidas.includes("cinco")){
         window.location.href = "../../Exercicios/Exercicio 6 - Position/position.html"
     }else{
         window.alert("Faça a fase anterior")
@@ -100,7 +100,7 @@ botao6.addEventListener("click", ()=>{
 botao7.addEventListener("click", ()=>{
     if(botao7.textContent.includes("🏆")){
         window.alert("Fase já concluida")
-    }else if(fasesConcluidas.includes("um,dois,tres,quatro,seis")){
+    }else if(fasesConcluidas.includes("seis")){
         window.location.href = "../../Exercicios/Exercicio 7 - Quiz Final/quizFinal.html"
     }else{
         window.alert("Faça a fase anterior")

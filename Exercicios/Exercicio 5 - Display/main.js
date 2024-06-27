@@ -64,7 +64,13 @@ function mensagem() {
     if (personagens.style.display == 'flex' && personagens.style.justifyContent == 'space-between') {
         modalMensagem.showModal()
         voltarMapa.addEventListener("click",()=>{
-        window.location.href = "http://127.0.0.1:5501/Trabalho-Git/Trabalho-DAD-CSS/Mapas/MapaHistoria/mapaHistoria.html"})
+        if(modo == "historia"){
+            persistencia()
+            window.location.href = "../../Mapas/MapaHistoria/mapaHistoria.html"
+        }else{
+            window.location.href = "../../Mapas/MapaExplorar/mapaExplorar.html"
+        }
+    })
     }
     else if (cardPerigo.style.backgroundColor == 'rgba(255, 0, 0, 0.56)') {
         alert('A princesa foi capturada!')
@@ -85,9 +91,10 @@ validar.addEventListener('click', () => {
     }
 
     setTimeout(() => {
-        mensagem()
         persistencia()
-    })
+        mensagem()
+    }, 500)
+    
 });
 
 
